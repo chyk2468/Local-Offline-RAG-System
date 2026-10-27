@@ -1,24 +1,73 @@
 # Local Offline RAG System
 
-This repository is currently empty. It does not yet contain an executable RAG pipeline or model configuration.
+**Build a local-first document assistant with private retrieval and local generation.**
 
-![Proposed offline RAG workflow](docs/readme-architecture.svg)
+[![GitHub](https://img.shields.io/badge/GitHub-Source-24292f?logo=github)](https://github.com/chyk2468/Local-Offline-RAG-System)
 
-## Intended direction
+## 1. Project Title & Tagline
 
-Build a local-first question-answering system that retrieves relevant passages from user-provided documents and supplies those passages to a local language model.
+Build a local-first document assistant with private retrieval and local generation.
 
-## Proposed workflow
+## 2. Problem Statement
 
-1. Read local documents.
-2. Split them into searchable chunks.
-3. Create embeddings with a local embedding model.
-4. Store vectors in a local index.
-5. Retrieve relevant chunks for each question.
-6. Generate an answer using a local model and show the supporting context.
+Documents can contain sensitive information that should not be sent to external services. A local RAG workflow can index documents and answer questions using locally available models.
 
-## Suggested first milestone
+## 3. Project Preview
 
-Start with PDF/TXT ingestion, a small local embedding model, a simple vector store, and a command-line test before adding a user interface.
+Add a real screenshot or short GIF of the current interface, with sensitive tokens and personal data removed.
 
-All items above are a roadmap. They are not features available in the current repository.
+[Open interactive architecture](architecture.html)
+
+## 4. Overview
+
+The workflow connects input collection, processing, and a reviewable result. The implementation and available integrations depend on the configured environment.
+
+## 5. Key Features
+
+- Ingest local documents.
+- Chunk and embed document text.
+- Retrieve relevant passages from a local index.
+- Generate answers with a locally hosted model.
+
+## 6. Architecture / Workflow
+
+![Animated Local Offline RAG System workflow](docs/animated-workflow.svg)
+
+Open the [interactive architecture explorer](architecture.html) to select a stage and inspect its role.
+
+## 7. Tech Stack
+
+Python, Streamlit, FAISS, local embedding model, GGUF-compatible language model
+
+## 8. Installation & Setup
+
+```bash
+git clone https://github.com/chyk2468/Local-Offline-RAG-System.git
+cd Local-Offline-RAG-System
+python -m venv .venv
+```
+
+Install the project's dependencies and configure the local model and index paths.
+
+## 9. Usage
+
+Start the configured app, ingest documents, and ask questions about the indexed content. Validate answers against retrieved passages and test offline operation after downloading all required models and dependencies.
+
+## 10. Project Structure
+
+Inspect the UI entry point, document ingestion, chunking, embedding/index storage, retrieval, and generation modules.
+
+## 11. Results & Demo
+
+Add an offline test showing a document, a query, retrieved passages, and a grounded answer. Record model size, response time, and retrieval settings.
+
+## 12. Future Enhancements
+
+- Add source citations for every answer.
+- Support incremental indexing and deletion.
+- Add retrieval-quality tests.
+- Expose model and chunking settings in the UI.
+
+## 13. License
+
+Check licences for source code, embedding models, language models, and document datasets.
