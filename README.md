@@ -1,73 +1,73 @@
 # Local Offline RAG System
 
-**Build a local-first document assistant with private retrieval and local generation.**
+**A proposed local-first document assistant architecture.**
 
 [![GitHub](https://img.shields.io/badge/GitHub-Source-24292f?logo=github)](https://github.com/chyk2468/Local-Offline-RAG-System)
 
 ## 1. Project Title & Tagline
 
-Build a local-first document assistant with private retrieval and local generation.
+A proposed local-first document assistant architecture.
 
 ## 2. Problem Statement
 
-Documents can contain sensitive information that should not be sent to external services. A local RAG workflow can index documents and answer questions using locally available models.
+Personal documents may contain sensitive information. A local retrieval workflow could help users search their own files without sending document content to external services.
 
 ## 3. Project Preview
 
-Add a real screenshot or short GIF of the current interface, with sensitive tokens and personal data removed.
+This repository is currently a placeholder. Add a real screenshot only after a working application has been implemented.
 
 [Open interactive architecture](architecture.html)
 
 ## 4. Overview
 
-The workflow connects input collection, processing, and a reviewable result. The implementation and available integrations depend on the configured environment.
+**Status: proposal only.** The repository does not yet contain a runnable document ingestion, retrieval, or generation pipeline. The diagram describes a possible future design.
 
 ## 5. Key Features
 
-- Ingest local documents.
-- Chunk and embed document text.
-- Retrieve relevant passages from a local index.
-- Generate answers with a locally hosted model.
+- Proposed local document ingestion.
+- Proposed chunking and local embeddings.
+- Proposed local vector retrieval.
+- Proposed answer generation with a locally hosted model.
 
 ## 6. Architecture / Workflow
 
-![Animated Local Offline RAG System workflow](docs/animated-workflow.svg)
+![Proposed animated local RAG workflow](docs/animated-workflow.svg)
 
-Open the [interactive architecture explorer](architecture.html) to select a stage and inspect its role.
+Open the [interactive architecture explorer](architecture.html) to inspect each proposed stage.
 
 ## 7. Tech Stack
 
-Python, Streamlit, FAISS, local embedding model, GGUF-compatible language model
+Not implemented yet. A possible baseline is Python, local embeddings, a local vector index, and a GGUF-compatible language model.
 
 ## 8. Installation & Setup
 
 ```bash
 git clone https://github.com/chyk2468/Local-Offline-RAG-System.git
 cd Local-Offline-RAG-System
-python -m venv .venv
 ```
 
-Install the project's dependencies and configure the local model and index paths.
+There is no runnable application or dependency setup yet.
 
 ## 9. Usage
 
-Start the configured app, ingest documents, and ask questions about the indexed content. Validate answers against retrieved passages and test offline operation after downloading all required models and dependencies.
+No working application is available. Start with a tested document loader and a query that returns relevant source excerpts before adding generation.
 
 ## 10. Project Structure
 
-Inspect the UI entry point, document ingestion, chunking, embedding/index storage, retrieval, and generation modules.
+Proposed layout: `src/`, `tests/`, `data/`, `README.md`, and a dependency file.
 
 ## 11. Results & Demo
 
-Add an offline test showing a document, a query, retrieved passages, and a grounded answer. Record model size, response time, and retrieval settings.
+No implementation results are available yet because the repository is currently a placeholder.
 
 ## 12. Future Enhancements
 
-- Add source citations for every answer.
-- Support incremental indexing and deletion.
-- Add retrieval-quality tests.
-- Expose model and chunking settings in the UI.
+- Implement document loading and tests.
+- Add chunking and local embeddings.
+- Build a searchable index.
+- Return source excerpts for each query.
+- Add grounded generation after retrieval works reliably.
 
 ## 13. License
 
-Check licences for source code, embedding models, language models, and document datasets.
+Add a LICENSE file before granting reuse or redistribution permissions.
